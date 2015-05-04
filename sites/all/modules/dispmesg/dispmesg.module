@@ -1,0 +1,14 @@
+<?php
+
+/**
+ * Implements hook_form_alter
+ */
+function dispmesg_form_alter(&$form, &$form_state, $form_id) {
+    if ($form_id === 'user_profile_form') {
+        $account = user_load(arg(1));
+
+        drupal_set_message( t("Hello World ... I mean %nimi!", array('%nimi' => $account->name)));
+    }
+}
+
+?> 

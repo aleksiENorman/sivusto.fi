@@ -1,0 +1,5 @@
+name = Display Message
+description = Displays Message on user account alter
+dependencies[] = user
+core = 7.x
+package = Custom
